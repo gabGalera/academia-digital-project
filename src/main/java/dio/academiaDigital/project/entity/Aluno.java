@@ -18,7 +18,6 @@ import java.util.List;
 @Table(name = "tb_alunos")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Aluno {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
