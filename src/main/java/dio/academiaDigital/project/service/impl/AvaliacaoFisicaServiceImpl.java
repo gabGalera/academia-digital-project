@@ -1,8 +1,10 @@
 package dio.academiaDigital.project.service.impl;
 
+import dio.academiaDigital.project.entity.Aluno;
 import dio.academiaDigital.project.entity.AvaliacaoFisica;
 import dio.academiaDigital.project.entity.form.AvaliacaoFisicaForm;
 import dio.academiaDigital.project.entity.form.AvaliacaoFisicaUpdateForm;
+import dio.academiaDigital.project.repository.AlunoRepository;
 import dio.academiaDigital.project.repository.AvaliacaoFisicaRepository;
 import dio.academiaDigital.project.service.IAvaliacaoFisicaService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,11 +16,21 @@ import java.util.List;
 public class AvaliacaoFisicaServiceImpl implements IAvaliacaoFisicaService {
 
     @Autowired
-    private AvaliacaoFisicaRepository repository;
+    private AvaliacaoFisicaRepository avaliacaoFisicaRepository;
+
+    @Autowired
+    private AlunoRepository alunoRepository;
 
     @Override
     public AvaliacaoFisica create(AvaliacaoFisicaForm form) {
-        return null;
+        AvaliacaoFisica avaliacaoFisica = new AvaliacaoFisica();
+        Aluno aluno = alunoRepository.findById(form.getAlunoId()).get();
+
+        avaliacaoFisica.setAluno(aluno);
+        avaliacaoFisica.setPeso(form.getPeso());
+        avaliacaoFisica.setAltura(form.getAltura());
+
+        return avaliacaoFisicaRepository.save(avaliacaoFisica);
     }
 
     @Override
