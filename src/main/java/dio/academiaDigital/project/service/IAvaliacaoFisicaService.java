@@ -6,7 +6,7 @@ import dio.academiaDigital.project.entity.form.AvaliacaoFisicaUpdateForm;
 
 import java.util.List;
 
-public interface IAvaliacaoFisica {
+public interface IAvaliacaoFisicaService {
     AvaliacaoFisica create(AvaliacaoFisicaForm form);
     AvaliacaoFisica get(Long id);
     List<AvaliacaoFisica> getAll();

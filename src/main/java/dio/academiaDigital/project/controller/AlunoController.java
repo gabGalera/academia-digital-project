@@ -2,7 +2,7 @@ package dio.academiaDigital.project.controller;
 
 import dio.academiaDigital.project.entity.Aluno;
 import dio.academiaDigital.project.entity.form.AlunoForm;
-import dio.academiaDigital.project.service.AlunoServiceImpl;
+import dio.academiaDigital.project.service.impl.AlunoServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
