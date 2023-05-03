@@ -33,7 +33,7 @@ public class MatriculaServiceImpl implements IMatriculaService {
 
     @Override
     public Matricula get(Long id) {
-        return null;
+        return matriculaRepository.findById(id).get();
     }
 
     @Override
