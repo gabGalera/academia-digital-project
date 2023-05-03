@@ -29,6 +29,6 @@ public class AlunoForm {
     private String bairro;
 
     @NotNull(message = "Preencha o campo corretamente.")
-    @Past(message = "'${validatedValue}' precisa estar entre {min} e {max} caracteres.")
+    @Past(message = "'Data ${validatedValue}' é inválida.")
     private LocalDate dataDeNascimento;
 }
