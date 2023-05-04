@@ -3,6 +3,7 @@ package dio.academiaDigital.project.controller;
 import dio.academiaDigital.project.entity.Aluno;
 import dio.academiaDigital.project.entity.AvaliacaoFisica;
 import dio.academiaDigital.project.entity.form.AlunoForm;
+import dio.academiaDigital.project.entity.form.AlunoUpdateForm;
 import dio.academiaDigital.project.service.impl.AlunoServiceImpl;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,5 +36,10 @@ public class AlunoController {
     @GetMapping("/{id}")
     public Aluno get(@PathVariable Long id) {
         return service.get(id);
+    }
+
+    @PutMapping("/{id}")
+    public Aluno update(@PathVariable Long id, @RequestBody AlunoUpdateForm formUpdate) {
+        return service.update(id, formUpdate);
     }
 }

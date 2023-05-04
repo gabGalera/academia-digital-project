@@ -1,6 +1,7 @@
 package dio.academiaDigital.project.repository;
 
 import dio.academiaDigital.project.entity.Aluno;
+import dio.academiaDigital.project.entity.form.AlunoUpdateForm;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
