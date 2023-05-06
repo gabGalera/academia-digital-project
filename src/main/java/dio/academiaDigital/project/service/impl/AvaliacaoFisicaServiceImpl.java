@@ -35,7 +35,7 @@ public class AvaliacaoFisicaServiceImpl implements IAvaliacaoFisicaService {
 
     @Override
     public AvaliacaoFisica get(Long id) {
-        return null;
+        return avaliacaoFisicaRepository.findById(id).get();
     }
 
     @Override
